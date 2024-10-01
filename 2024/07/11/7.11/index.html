@@ -282,7 +282,7 @@
     const countELement = document.getElementById('twikoo-count')
     if(!countELement) return
     twikoo.getCommentsCount({
-      envId: 'https://twikoo.zeabur.app/',
+      envId: 'http://twikoo.wakeol.top',
       region: '',
       urls: [window.location.pathname],
       includeReply: false
@@ -296,14 +296,14 @@
   const init = () => {
     twikoo.init(Object.assign({
       el: '#twikoo-wrap',
-      envId: 'https://twikoo.zeabur.app/',
+      envId: 'http://twikoo.wakeol.top',
       region: '',
       onCommentLoaded: () => {
         btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
       }
     }, null))
 
-    
+    GLOBAL_CONFIG_SITE.isPost && getCount()
   }
 
   const loadTwikoo = () => {
